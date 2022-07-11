@@ -1,4 +1,4 @@
-const ITEMS = {
+export const ITEMS = {
     TOPS : {
         T_SHIRT : 't-shirt',
     },
@@ -16,3 +16,5 @@ const ITEMS = {
     }
 
 }
+
+export default ITEMS;
