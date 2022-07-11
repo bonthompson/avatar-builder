@@ -1,5 +1,6 @@
 import './App.css';
 import Container from './components/Container';
+import { AvatarCreatorProvider } from './hooks'
 
 const App = () => {
   return (
@@ -9,4 +10,10 @@ const App = () => {
   );
 }
 
-export default App;
+const AppWrapper = props => (
+  <AvatarCreatorProvider>
+    <App {...props} />
+  </AvatarCreatorProvider>
+)
+
+export default AppWrapper;

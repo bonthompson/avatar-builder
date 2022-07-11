@@ -2,10 +2,16 @@ import styled from 'styled-components'
 
 const StyledAvatarContainer = styled.div`
     background: #fff;
-    position: absolute;
-    transform: translate(50%, 20%);
     height: 500px;
-    width: 500px;
+    position: relative;
 `
 
-export default StyledAvatarContainer
+const StyledAvatar = styled.div`
+    background: #fff;
+    position: absolute;
+    transform: translate(50%, 20%);
+    margin: auto;
+    width: 50%;
+`
+
+export { StyledAvatarContainer, StyledAvatar }
