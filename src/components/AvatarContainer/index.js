@@ -2,17 +2,20 @@
 import React from 'react';
 import { StyledAvatarContainer, StyledAvatar } from './styles/index'
 import { useAvatarCreatorDataContext } from '../../hooks/index'
-import Face from "../Items/Face";
+import Body from "../Items/Body";
 import styled from 'styled-components';
 import { Top } from '../Items/Tops';
 import Brands from '../Brands';
+import { Bottom } from '../Items/Bottom';
 
 const BodyContainer = styled.div`
-        display: flex;
-        flex-direction: column;
-        width: 200px;
-        align-items: center;
-    `
+background: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+height: 500px;
+position: relative;`
 
 const AvatarContainer = React.forwardRef((pops, ref) => {
     // const { isDisplayedItem } = useAvatarCreatorDataContext()
@@ -20,8 +23,7 @@ const AvatarContainer = React.forwardRef((pops, ref) => {
         <StyledAvatarContainer ref={ref} className="avatar-container" color='#7A7885'>
             <Brands />
             <BodyContainer>
-                <Face />
-                <Top />
+                <Body />
             </BodyContainer>
         </StyledAvatarContainer>
     );

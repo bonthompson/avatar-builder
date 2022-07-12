@@ -1,16 +1,13 @@
 import React from 'react';
 import ITEMS from '../../../config/items';
-import LongHair from './LongHair';
+import { useAvatarCreatorDataContext } from '../../../hooks';
 
 
 export const Hair = ({style, ...rest}) =>  {
 
-    switch (style) {
-        case ITEMS.HAIR.LONG_HAIR:
-            return (<LongHair {...rest}/>)
-        default:
-            return (<LongHair {...rest}/>)
-    }
+    const { HAIR } = useAvatarCreatorDataContext()
+
+    return(React.cloneElement(HAIR, {...rest}))
 
 }
 export default Hair;

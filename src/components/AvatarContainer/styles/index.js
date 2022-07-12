@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 const StyledAvatarContainer = styled.div`
     background: #fff;
-    height: 500px;
     position: relative;
 `
 

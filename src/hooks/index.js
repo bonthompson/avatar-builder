@@ -1,4 +1,11 @@
 import React, { createContext, useCallback, useContext, useReducer } from 'react'
+import Eyes from '../components/Items/Eyes'
+import RoundEyes from '../components/Items/Eyes/RoundEyes'
+import LongHair from '../components/Items/Hair/LongHair'
+import Mouth from '../components/Items/Mouth/Mouth'
+import TShirt from '../components/Items/Tops/TShirt'
+import Pantalon from '../components/Items/Bottom/Pantalon'
+
 
 const ACTIONS = {
     DISPLAYED_ITEMS: 'setDisplayedItems',
@@ -15,25 +22,31 @@ const useAvatarCreatorContext = AvatarCreatorContext => {
 const AvatarCreatorDataContext = createContext()
 const RequestsContext = createContext()
 
-const useAvatarCreatorDataContext = () =>
-    useAvatarCreatorContext(AvatarCreatorDataContext)
+const useAvatarCreatorDataContext = () => useAvatarCreatorContext(AvatarCreatorDataContext)
 const useRequestsContext = () => useAvatarCreatorContext(RequestsContext)
 
 
 const AvatarCreatorProvider = ({ children }) => {
 
     const initialState = {
-        isDisplayedItem: [],
-        category: 'BODY'
+        isDisplayedItem: ["test"],
+        category: 'BODY',
+        BODY: <TShirt/>,
+        BOTTOM: <Pantalon/>,
+        MOUTH: <Mouth/>,
+        EYES: <RoundEyes/>,
+        HAIR: <LongHair/>,
+        TOP: <TShirt/>,
+
     }
 
     const reducer = (state, action = {}) => {
-        const { name, newState } = action
+        const { name } = action
         switch (name) {
-            case ACTIONS.DISPLAYED_ITEMS:
-                return { ...state, isDisplayedItem: newState }
+            case ACTIONS.SET_STATE:
+                return { ...state,  ...action.payload }
             case ACTIONS.CATEGORY:
-                return { ...state, category: newState }
+                    return { ...state, category: action.payload.category }
             default:
                 return null
         }
@@ -41,11 +54,11 @@ const AvatarCreatorProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(reducer, initialState)
 
-    const setIsDisplayedItem = isDisplayedItem =>
-        dispatch({ name: ACTIONS.DISPLAYED_ITEMS, newState: isDisplayedItem })
-    const setCategory = category =>
-        dispatch({ name: ACTIONS.CATEGORY, newState: category })
+    const setIsDisplayedItem = newState =>
+        dispatch({ name: ACTIONS.SET_STATE, payload : newState })
 
+        const setCategory = category =>
+        dispatch({ name: ACTIONS.CATEGORY, payload: category })
 
     return (
         <AvatarCreatorDataContext.Provider value={state}>

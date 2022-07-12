@@ -1,7 +1,7 @@
 import { BigEar01, BigEar02 } from '../assets/body'
 export const ITEMS = {
     BODY: [
-        <BigEar01 />,
+        <BigEar02 />,
     ],
     TOPS: [
         <BigEar02 />,
@@ -33,3 +33,5 @@ export const ITEMS = {
         <BigEar01 />,
     ]
 }
+
+export default ITEMS

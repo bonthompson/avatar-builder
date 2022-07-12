@@ -1,16 +1,12 @@
 import React from 'react';
-import ITEMS from '../../../config/items';
-import RoundEyes from './RoundEyes';
+import { useAvatarCreatorDataContext } from '../../../hooks';
 
 
-export const MouthContainer = ({style, ...rest}) =>  {
+export const Eyes = ({style, ...rest}) =>  {
 
-    switch (style) {
-        case ITEMS.EYES.ROUND_EYES:
-            return (<RoundEyes {...rest}/>)
-        default:
-            return (<RoundEyes {...rest}/>)
-    }
+        const { EYES } = useAvatarCreatorDataContext()
+
+    return(React.cloneElement(EYES, {...rest}))
 
 }
-export default MouthContainer;
+export default Eyes;

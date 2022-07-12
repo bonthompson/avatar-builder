@@ -18,14 +18,13 @@ const settings = {
 const ItemCarousel = () => {
     const { setIsDisplayedItem } = useRequestsContext()
     const { category } = useAvatarCreatorDataContext()
-
     return (
         <ItemCarouselContainer>
 
             <Slider {...settings}>
                 {ITEMS[category].map(item => (
                     <StyledSlide
-                        onClick={() => setIsDisplayedItem(item)}>
+                        onClick={() => setIsDisplayedItem({[category] : item})}>
                         {item}
                     </StyledSlide>
                 ))}
