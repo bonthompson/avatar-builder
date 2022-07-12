@@ -1,7 +1,8 @@
 import React, { createContext, useCallback, useContext, useReducer } from 'react'
 
 const ACTIONS = {
-    DISPLAYED_ITEMS: 'test',
+    DISPLAYED_ITEMS: 'setDisplayedItems',
+    CATEGORY: 'setCategory',
 }
 const useAvatarCreatorContext = AvatarCreatorContext => {
     const context = useContext(AvatarCreatorContext)
@@ -22,7 +23,8 @@ const useRequestsContext = () => useAvatarCreatorContext(RequestsContext)
 const AvatarCreatorProvider = ({ children }) => {
 
     const initialState = {
-        isDisplayedItem: []
+        isDisplayedItem: [],
+        category: 'BODY'
     }
 
     const reducer = (state, action = {}) => {
@@ -30,6 +32,8 @@ const AvatarCreatorProvider = ({ children }) => {
         switch (name) {
             case ACTIONS.DISPLAYED_ITEMS:
                 return { ...state, isDisplayedItem: newState }
+            case ACTIONS.CATEGORY:
+                return { ...state, category: newState }
             default:
                 return null
         }
@@ -39,6 +43,8 @@ const AvatarCreatorProvider = ({ children }) => {
 
     const setIsDisplayedItem = isDisplayedItem =>
         dispatch({ name: ACTIONS.DISPLAYED_ITEMS, newState: isDisplayedItem })
+    const setCategory = category =>
+        dispatch({ name: ACTIONS.CATEGORY, newState: category })
 
 
     return (
@@ -46,6 +52,7 @@ const AvatarCreatorProvider = ({ children }) => {
             <RequestsContext.Provider
                 value={{
                     setIsDisplayedItem,
+                    setCategory
                 }}
             >
                 {children}
