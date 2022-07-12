@@ -3,53 +3,21 @@ import { StyledItem } from "../StyledItem";
 
 
 export const RoundEyes = ({ color }) => (
-  <div style={{ position: "absolute", top: "8%", left: "-4%" }}>
-    <StyledItem width="271" height="234" viewBox="0 0 270 291" fill="none" xmlns="http://www.w3.org/2000/svg" color={color}>
-      <g
-        fillOpacity="1"
-        strokeDasharray="none"
-        strokeOpacity="1"
-        display="inline"
-      >
-        <circle
-          cx="78.82"
-          cy="80.953"
-          r="10.353"
-          fill="#fff"
-          stroke="#000"
-          strokeWidth="1.151"
-          opacity="1"
-        ></circle>
-        <circle
-          cx="114.87"
-          cy="80.527"
-          r="10.353"
-          fill="#fff"
-          stroke="#000"
-          strokeWidth="1.151"
-          opacity="1"
-        ></circle>
-        <ellipse
-          cx="116.605"
-          cy="80.128"
-          fill={color}
-          stroke="none"
-          strokeWidth="0.393"
-          opacity="1"
-          rx="2.804"
-          ry="2.804"
-        ></ellipse>
-        <ellipse
-          cx="80.341"
-          cy="79.812"
-          fill={color}
-          stroke="none"
-          strokeWidth="0.393"
-          opacity="1"
-          rx="2.804"
-          ry="2.804"
-        ></ellipse>
-      </g>
+  <div className="svg-container" style={{ position: "absolute", top: "31%", left: "40%" }}>
+    <StyledItem width="59"
+      height="23"
+      fill="none"
+      viewBox="0 0 59 23" xmlns="http://www.w3.org/2000/svg" color={color}>
+      <path
+        fill="#fff"
+        stroke="#000"
+        strokeWidth="1.151"
+        d="M11.353 22.132c5.717 0 10.353-4.635 10.353-10.353 0-5.717-4.636-10.352-10.353-10.352C5.635 1.427 1 6.062 1 11.779c0 5.718 4.635 10.353 10.353 10.353zM47.403 21.706c5.718 0 10.353-4.636 10.353-10.353C57.756 5.635 53.12 1 47.403 1S37.05 5.635 37.05 11.353c0 5.717 4.635 10.353 10.353 10.353z"
+      ></path>
+      <path
+        fill={color}
+        d="M49.138 13.757a2.803 2.803 0 100-5.607 2.803 2.803 0 000 5.607zM12.874 13.441a2.804 2.804 0 100-5.607 2.804 2.804 0 000 5.607z"
+      ></path>
     </StyledItem>
   </div>)
 

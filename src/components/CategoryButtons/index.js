@@ -34,10 +34,10 @@ const CategoryButtons = () => {
             <CategoryButton onClick={() => setIsDisplayedItem({ category: 'BOTTOMS' })} >
                 <BottomsCategoryIcon />
             </CategoryButton>
-            {/* <CategoryButton onClick={() => setIsDisplayedItem({ category: 'FEET' })} >
-                <FeetCategoryIcon />
-                feet
-            </CategoryButton> */}
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'SHOES' })} >
+                {/* <FeetCategoryIcon /> */}
+                shoes
+            </CategoryButton>
             <CategoryButton onClick={() => setIsDisplayedItem({ category: 'MISC' })} >
                 <MiscCategoryIcon />
             </CategoryButton>

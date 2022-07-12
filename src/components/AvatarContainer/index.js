@@ -9,7 +9,6 @@ import Brands from '../Brands';
 import { Bottom } from '../Items/Bottom';
 
 const BodyContainer = styled.div`
-background: #fff;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -18,9 +17,9 @@ height: 500px;
 position: relative;`
 
 const AvatarContainer = React.forwardRef((pops, ref) => {
-    // const { isDisplayedItem } = useAvatarCreatorDataContext()
+    const { BACKGROUND } = useAvatarCreatorDataContext()
     return (
-        <StyledAvatarContainer ref={ref} className="avatar-container" color='#7A7885'>
+        <StyledAvatarContainer ref={ref} className="avatar-container" color={BACKGROUND}>
             <Brands />
             <BodyContainer>
                 <Body />
