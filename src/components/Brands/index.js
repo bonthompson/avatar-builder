@@ -1,26 +1,12 @@
-import BRANDS from "../../config/brand";
-import Mailgun from "./Mailgun.png"
+import React from "react";
 
+import { useAvatarCreatorDataContext } from '../../hooks';
 
-const Brands = ({brandName}) => {
+const Brands = ({style, ...rest}) =>  {
 
-    let realChildren = "";
+    const { BACKGROUND} = useAvatarCreatorDataContext()
 
-    switch(brandName) {
-        case BRANDS.mailgun:
-            realChildren = <img src={Mailgun} alt="brand"/>
-            break;
-        default:
-            realChildren = <img src={Mailgun} alt="brand"/>
-    }
-
-    return(
-        <div style={{
-            margin: '20px 25px auto auto'
-        }}>
-            {realChildren}
-        </div>
-    )
+    return(React.cloneElement(BACKGROUND, {...rest}))
 }
 
 export default Brands;

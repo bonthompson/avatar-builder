@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledItem } from "../StyledItem";
 
-export const TShirt = ({ color = "#CB4A49" }) => (
+export const Pantalon = ({ color = "#CB4A49" }) => (
   <StyledItem
     style={{marginTop: '-10px',
     left: '11px',
@@ -469,4 +469,4 @@ export const TShirt = ({ color = "#CB4A49" }) => (
   </StyledItem>
 );
 
-export default TShirt;
+export default Pantalon;

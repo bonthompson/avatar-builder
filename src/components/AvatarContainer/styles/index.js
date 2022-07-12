@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledAvatarContainer = styled.div`
-    background: #fff;
+    background: ${props => props.color};
     position: relative;
 `
 

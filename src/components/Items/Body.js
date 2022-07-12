@@ -1,8 +1,10 @@
 import React from "react";
 import { Bottom } from "./Bottom";
+import EyeBrows from "./EyeBrows";
 import Eyes from "./Eyes";
 import Hair from "./Hair";
 import Mouth from "./Mouth";
+import { Shoes } from "./Shoes";
 import { StyledItem } from "./StyledItem";
 import { Top } from "./Tops";
 import TShirt from "./Tops/TShirt";
@@ -17,11 +19,14 @@ export const Body = ({ color = "#E3CDAB" }) => (
       position: "relative",
     }}
   >
+    
+    <EyeBrows/>
     <Eyes />
     <Hair />
     <Mouth />
     <Top/>
     <Bottom/>
+    <Shoes/>
     <StyledItem
       width="169"
       height="199"

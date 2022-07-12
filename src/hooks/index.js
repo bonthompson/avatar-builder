@@ -1,10 +1,14 @@
 import React, { createContext, useCallback, useContext, useReducer } from 'react'
-import Eyes from '../components/Items/Eyes'
+import Shoes1 from '../components/Items/Shoes/Shoes1'
 import RoundEyes from '../components/Items/Eyes/RoundEyes'
 import LongHair from '../components/Items/Hair/LongHair'
 import Mouth from '../components/Items/Mouth/Mouth'
 import TShirt from '../components/Items/Tops/TShirt'
 import Pantalon from '../components/Items/Bottom/Pantalon'
+import Brows1 from '../components/Items/EyeBrows/Brows1'
+import Mailjet from '../components/Brands/Mailjet'
+
+
 
 
 const ACTIONS = {
@@ -38,8 +42,11 @@ const AvatarCreatorProvider = ({ children }) => {
         BOTTOM: <Pantalon/>,
         MOUTH: <Mouth/>,
         EYES: <RoundEyes/>,
+        EYEBROWS: <Brows1/>,
         HAIR: <LongHair/>,
         TOP: <TShirt/>,
+        SHOES: <Shoes1/>,
+        BACKGROUND: <Mailjet/>,
 
     }
 
