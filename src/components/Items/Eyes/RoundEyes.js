@@ -2,9 +2,9 @@ import React from "react";
 import { StyledItem } from "../StyledItem";
 
 
-export const RoundEyes = ({color}) => (
-    <div style={{position: "absolute", top: "8%", left: "-4%"}}>
-    <StyledItem  width="271" height="234" viewBox="0 0 270 291" fill="none" xmlns="http://www.w3.org/2000/svg" color={color}>
+export const RoundEyes = ({ color }) => (
+  <div style={{ position: "absolute", top: "8%", left: "-4%" }}>
+    <StyledItem width="271" height="234" viewBox="0 0 270 291" fill="none" xmlns="http://www.w3.org/2000/svg" color={color}>
       <g
         fillOpacity="1"
         strokeDasharray="none"
@@ -32,7 +32,7 @@ export const RoundEyes = ({color}) => (
         <ellipse
           cx="116.605"
           cy="80.128"
-          fill="#280b0b"
+          fill={color}
           stroke="none"
           strokeWidth="0.393"
           opacity="1"
@@ -42,7 +42,7 @@ export const RoundEyes = ({color}) => (
         <ellipse
           cx="80.341"
           cy="79.812"
-          fill="#280b0b"
+          fill={color}
           stroke="none"
           strokeWidth="0.393"
           opacity="1"
@@ -50,8 +50,8 @@ export const RoundEyes = ({color}) => (
           ry="2.804"
         ></ellipse>
       </g>
-        </StyledItem>
-        </div>)
+    </StyledItem>
+  </div>)
 
 
 export default RoundEyes

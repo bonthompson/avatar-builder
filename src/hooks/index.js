@@ -33,25 +33,29 @@ const AvatarCreatorProvider = ({ children }) => {
     const initialState = {
         isDisplayedItem: ["test"],
         category: 'BODY',
-        colour: '#fff',
-        BODY: <TShirt/>,
-        BOTTOM: <Pantalon/>,
-        MOUTH: <Mouth/>,
-        EYES: <RoundEyes/>,
-        HAIR: <LongHair/>,
-        TOP: <TShirt/>,
-
+        colours: { // merge this with below?
+            BODY: '#FDCDA7',
+            EYES: '#000',
+            EYEBROWS: '#000',
+            HAIR: '#FEF7D3',
+            TOPS: '#3B76CB',
+            BOTTOMS: '#F2F6F8',
+            FEET: '#000'
+        },
+        BODY: <TShirt />,
+        BOTTOM: <Pantalon />,
+        MOUTH: <Mouth />,
+        EYES: <RoundEyes />,
+        HAIR: <LongHair />,
+        TOP: <TShirt />,
     }
 
     const reducer = (state, action = {}) => {
         const { name } = action
+        console.log(state, 'state')
         switch (name) {
             case ACTIONS.SET_STATE:
-                return { ...state,  ...action.payload }
-            // case ACTIONS.CATEGORY:
-            //         return { ...state, category: action.payload.category}
-            // case ACTIONS.COLOUR:
-            //     return { ...state, colour: action.payload.colour }
+                return { ...state, ...action.payload }
             default:
                 return null
         }
@@ -60,7 +64,7 @@ const AvatarCreatorProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState)
 
     const setIsDisplayedItem = newState =>
-        dispatch({ name: ACTIONS.SET_STATE, payload : newState })
+        dispatch({ name: ACTIONS.SET_STATE, payload: newState })
 
     return (
         <AvatarCreatorDataContext.Provider value={state}>

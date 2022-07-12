@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const ItemCarouselContainer = styled.div`
     width: 80%;
     margin: auto;
+    position relative;
 `
 
 const StyledSlide = styled.div`
@@ -21,4 +22,10 @@ const StyledSlide = styled.div`
     }
 `
 
-export { ItemCarouselContainer, StyledSlide }
+const StyledDiv = styled.div`
+    position: absolute;
+    top: -300px
+
+`
+
+export { ItemCarouselContainer, StyledSlide, StyledDiv }

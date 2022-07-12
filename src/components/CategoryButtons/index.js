@@ -8,39 +8,40 @@ import { MiscCategoryIcon, BackgroundCategoryIcon, BodyCategoryIcon, BottomsCate
 const CategoryButtons = () => {
     const { setIsDisplayedItem } = useRequestsContext()
     return (
+
         <CategoryButtonsContainer>
-            <CategoryButton onClick={() => setIsDisplayedItem({category: 'BODY'})} >
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'BODY' })} >
                 <BodyCategoryIcon />
             </CategoryButton>
-            <CategoryButton onClick={() => setIsDisplayedItem({category: 'EYES'})}>
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'EYES' })}>
                 <EyesCategoryIcon />
             </CategoryButton>
-            <CategoryButton onClick={() => setIsDisplayedItem({category:'EYEBROWS'})}>
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'EYEBROWS' })}>
                 <EyebrowsCategoryIcon />
             </CategoryButton>
-            <CategoryButton onClick={() => setIsDisplayedItem({category: 'HAIR'})}>
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'HAIR' })}>
                 <HairCategoryIcon />
             </CategoryButton>
-            <CategoryButton onClick={() => setIsDisplayedItem({category: 'MOUTH'})} >
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'MOUTH' })} >
                 <MouthCategoryIcon />
             </CategoryButton>
-            <CategoryButton onClick={() => setIsDisplayedItem({category: 'NOSE'})} >
+            {/* <CategoryButton onClick={() => setIsDisplayedItem({category: 'NOSE'})} >
                 nose
-            </CategoryButton>
-            <CategoryButton onClick={() => setIsDisplayedItem({category: 'TOP'})} >
+            </CategoryButton> */}
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'TOPS' })} >
                 <TopsCategoryIcon />
             </CategoryButton>
-            <CategoryButton onClick={() => setIsDisplayedItem({category: 'BOTTOM'})} >
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'BOTTOMS' })} >
                 <BottomsCategoryIcon />
             </CategoryButton>
-            <CategoryButton onClick={() => setIsDisplayedItem({category: 'FEET'})} >
-                {/* <FeetCategoryIcon /> */}
+            {/* <CategoryButton onClick={() => setIsDisplayedItem({ category: 'FEET' })} >
+                <FeetCategoryIcon />
                 feet
-            </CategoryButton>
-            <CategoryButton onClick={() => setIsDisplayedItem({category: 'MISC'})} >
+            </CategoryButton> */}
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'MISC' })} >
                 <MiscCategoryIcon />
             </CategoryButton>
-            <CategoryButton onClick={() => setIsDisplayedItem({category: 'BACKGROUND'})} >
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'BACKGROUND' })} >
                 <BackgroundCategoryIcon />
             </CategoryButton>
         </CategoryButtonsContainer >
