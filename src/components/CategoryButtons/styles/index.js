@@ -13,6 +13,9 @@ const CategoryButton = styled.div`
     background: #61dafb;
     margin: 0px 5px;
     border-radius: 50px;
+    svg {
+        margin-top: 10px;
+    }
     // &:hover {
     //   }
 `

@@ -1,11 +1,10 @@
 import { useRef } from "react";
 import html2canvas from "html2canvas";
 
-import AvatarContainer from "../AvatarContainer/index";
-import StyledContainer from "./styles/index";
-import Download from "../Download/index";
-import ItemCarousel from "../ItemCarousel/index";
-import CategoryButtons from "../CategoryButtons/index";
+import AvatarContainer from '../AvatarContainer/index'
+import { StyledContainer, DownloadButton } from './styles/index'
+import ItemCarousel from '../ItemCarousel/index'
+import CategoryButtons from '../CategoryButtons/index'
 
 const Container = () => {
   const componentRef = useRef(null);
@@ -14,12 +13,12 @@ const Container = () => {
     const element = componentRef.current;
     const canvas = await html2canvas(element);
 
-    const data = canvas.toDataURL("image/jpg");
-    const link = document.createElement("a");
+    const data = canvas.toDataURL('image/jpg');
+    const link = document.createElement('a');
 
-    if (typeof link.download === "string") {
+    if (typeof link.download === 'string') {
       link.href = data;
-      link.download = "image.jpg";
+      link.download = 'image.jpg';
 
       document.body.appendChild(link);
       link.click();
@@ -31,13 +30,18 @@ const Container = () => {
 
   return (
     <StyledContainer className="layout-container">
-      <button onClick={handleDownloadImage}>Export As JPEG</button>
+      {/* <button onClick={handleDownloadImage}>
+        Export As JPEG
+      </button> */}
       <AvatarContainer ref={componentRef} />
       <CategoryButtons />
       <ItemCarousel />
-      <Download />
+      <DownloadButton onClick={handleDownloadImage}>
+        Download & Share!
+      </DownloadButton>
     </StyledContainer>
+
   );
-};
+}
 
 export default Container;

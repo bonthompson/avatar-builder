@@ -10,7 +10,9 @@ import Pantalon from '../components/Items/Bottom/Pantalon'
 const ACTIONS = {
     DISPLAYED_ITEMS: 'setDisplayedItems',
     CATEGORY: 'setCategory',
+    COLOUR: 'setColour',
 }
+
 const useAvatarCreatorContext = AvatarCreatorContext => {
     const context = useContext(AvatarCreatorContext)
     if (!context) {
@@ -31,6 +33,7 @@ const AvatarCreatorProvider = ({ children }) => {
     const initialState = {
         isDisplayedItem: ["test"],
         category: 'BODY',
+        colour: '#fff',
         BODY: <TShirt/>,
         BOTTOM: <Pantalon/>,
         MOUTH: <Mouth/>,
@@ -45,8 +48,10 @@ const AvatarCreatorProvider = ({ children }) => {
         switch (name) {
             case ACTIONS.SET_STATE:
                 return { ...state,  ...action.payload }
-            case ACTIONS.CATEGORY:
-                    return { ...state, category: action.payload.category }
+            // case ACTIONS.CATEGORY:
+            //         return { ...state, category: action.payload.category}
+            // case ACTIONS.COLOUR:
+            //     return { ...state, colour: action.payload.colour }
             default:
                 return null
         }
@@ -57,15 +62,11 @@ const AvatarCreatorProvider = ({ children }) => {
     const setIsDisplayedItem = newState =>
         dispatch({ name: ACTIONS.SET_STATE, payload : newState })
 
-        const setCategory = category =>
-        dispatch({ name: ACTIONS.CATEGORY, payload: category })
-
     return (
         <AvatarCreatorDataContext.Provider value={state}>
             <RequestsContext.Provider
                 value={{
                     setIsDisplayedItem,
-                    setCategory
                 }}
             >
                 {children}
