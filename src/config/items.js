@@ -31,5 +31,20 @@ export const ITEMS = {
         <BigEar01 />,
         <BigEar01 />,
         <BigEar01 />,
+    ],
+    EYEBROWS: [
+        <BigEar01 />,
+    ],
+    NOSE: [
+        <BigEar01 />,
+    ],
+    FEET: [
+        <BigEar01 />,
+    ],
+    MISC: [
+        <BigEar01 />,
+    ],
+    BACKGROUND: [
+        <BigEar01 />,
     ]
 }

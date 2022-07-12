@@ -3,7 +3,9 @@ import React, { createContext, useCallback, useContext, useReducer } from 'react
 const ACTIONS = {
     DISPLAYED_ITEMS: 'setDisplayedItems',
     CATEGORY: 'setCategory',
+    COLOUR: 'setColour',
 }
+
 const useAvatarCreatorContext = AvatarCreatorContext => {
     const context = useContext(AvatarCreatorContext)
     if (!context) {
@@ -24,7 +26,8 @@ const AvatarCreatorProvider = ({ children }) => {
 
     const initialState = {
         isDisplayedItem: [],
-        category: 'BODY'
+        category: 'BODY',
+        colour: '#fff'
     }
 
     const reducer = (state, action = {}) => {
@@ -34,6 +37,8 @@ const AvatarCreatorProvider = ({ children }) => {
                 return { ...state, isDisplayedItem: newState }
             case ACTIONS.CATEGORY:
                 return { ...state, category: newState }
+            case ACTIONS.COLOUR:
+                return { ...state, colour: newState }
             default:
                 return null
         }
@@ -45,6 +50,8 @@ const AvatarCreatorProvider = ({ children }) => {
         dispatch({ name: ACTIONS.DISPLAYED_ITEMS, newState: isDisplayedItem })
     const setCategory = category =>
         dispatch({ name: ACTIONS.CATEGORY, newState: category })
+    const setColour = colour =>
+        dispatch({ name: ACTIONS.COLOUR, newState: colour })
 
 
     return (
@@ -52,7 +59,8 @@ const AvatarCreatorProvider = ({ children }) => {
             <RequestsContext.Provider
                 value={{
                     setIsDisplayedItem,
-                    setCategory
+                    setCategory,
+                    setColour
                 }}
             >
                 {children}

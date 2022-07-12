@@ -7,8 +7,18 @@ const ItemCarouselContainer = styled.div`
 
 const StyledSlide = styled.div`
     // border: 3px solid black;
-    max-height: 200px;
     overflow: hidden;
+    background: lightgray;
+    height: 90px;
+    width: 90px !important;
+    svg {
+        // fill: white;
+        width: 70px !important;
+        height: 70px !important;
+        left: auto !important;
+        top: 10px !important;
+        position: relative !important;
+    }
 `
 
 export { ItemCarouselContainer, StyledSlide }
