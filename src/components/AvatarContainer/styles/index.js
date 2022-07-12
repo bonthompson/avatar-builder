@@ -7,11 +7,21 @@ const StyledAvatarContainer = styled.div`
 `
 
 const StyledAvatar = styled.div`
-    background: #fff;
+    // background: #fff;
+    // position: absolute;
+    // transform: translate(50%, 20%);
+    // margin: auto;
+    // width: 50%;
+
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+    background: ${props => props.color};
     position: absolute;
     transform: translate(50%, 20%);
-    margin: auto;
-    width: 50%;
+    height: 800px;
+    width: 800px;
 `
 
 export { StyledAvatarContainer, StyledAvatar }
