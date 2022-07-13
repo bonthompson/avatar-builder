@@ -29,6 +29,7 @@ const DefaultAvatars = () => {
         setIsDisplayedItem({ BEARD: <Beard1 /> })
         setIsDisplayedItem({ GLASSES: 'no glasses' })
         setIsDisplayedItem({ colours: { ...colours, HAIR: '#724837' } })
+        setIsDisplayedItem({ colours: { ...colours, BEARD: '#724837' } })
     }
 
     const displaySeb = () => {
@@ -42,6 +43,7 @@ const DefaultAvatars = () => {
         setIsDisplayedItem({ HAIR: 'no hair (loïck)' })
         setIsDisplayedItem({ BEARD: <Beard1 /> })
         setIsDisplayedItem({ GLASSES: <Glasses1 /> })
+        setIsDisplayedItem({ colours: { ...colours, BEARD: '#000' } })
     }
 
     return (

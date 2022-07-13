@@ -54,7 +54,6 @@ const AvatarCreatorProvider = ({ children }) => {
             BOTTOMS: '#F2F6F8',
             FEET: '#000',
             NOSE: '#F2F6F8',
-            GLASSES: '#F2F6F8',
         },
         BODY: <Dress />,
         BOTTOM: <Pantalon />,
