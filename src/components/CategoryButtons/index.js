@@ -31,7 +31,7 @@ const CategoryButtons = () => {
             <CategoryButton onClick={() => setIsDisplayedItem({ category: 'GLASSES' })} >
                 <GlassesCategoryIcon />
             </CategoryButton>
-            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'BEARDS' })} >
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'BEARD' })} >
                 <BeardsCategoryIcon />
             </CategoryButton>
             <CategoryButton onClick={() => setIsDisplayedItem({ category: 'TOPS' })} >

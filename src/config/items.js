@@ -11,27 +11,26 @@ import Glasses1 from '../components/Items/Glasses/Glasses1'
 //Eyes
 import EyesWithEyelashes from '../components/Items/Eyes/EyesWithEyelashes'
 import RoundEyes from '../components/Items/Eyes/RoundEyes'
-import {Eyes3} from '../components/Items/Eyes/Eyes3';
-import {Eyes4} from '../components/Items/Eyes/Eyes4';
-import {Eyes5} from '../components/Items/Eyes/Eyes5';
-import {Eyes6} from '../components/Items/Eyes/Eyes6';
+import { Eyes3 } from '../components/Items/Eyes/Eyes3';
+import { Eyes4 } from '../components/Items/Eyes/Eyes4';
+import { Eyes5 } from '../components/Items/Eyes/Eyes5';
+import { Eyes6 } from '../components/Items/Eyes/Eyes6';
 
 //Brows
 import Brows1 from '../components/Items/EyeBrows/Brows1'
 import Brows2 from '../components/Items/EyeBrows/Brows2'
-import {Brows3} from '../components/Items/EyeBrows/Brows3'
+import { Brows3 } from '../components/Items/EyeBrows/Brows3'
 
 //Hair
 import Hair from '../components/Items/Hair';
 import LongHair from '../components/Items/Hair/LongHair'
 import ShortHair from '../components/Items/Hair/ShortHair'
 import { Hair3 } from '../components/Items/Hair/Hair3';
-import {Hair4} from '../components/Items/Hair/Hair4';
-import {Hair5} from '../components/Items/Hair/Hair5';
-import {Hair6} from '../components/Items/Hair/Hair6';
+import { Hair4 } from '../components/Items/Hair/Hair4';
+import { Hair5 } from '../components/Items/Hair/Hair5';
+import { Hair6 } from '../components/Items/Hair/Hair6';
 
 //Mouth
-import { Mouth } from '../components/Items/Mouth/Mouth'
 import { Mouth2 } from '../components/Items/Mouth/Mouth2';
 import { Mouth3 } from '../components/Items/Mouth/Mouth3';
 import { Mouth4 } from '../components/Items/Mouth/Mouth4';
@@ -42,9 +41,12 @@ import Mailgun from '../components/Brands/Mailgun'
 import TShirt from '../components/Items/Tops/TShirt';
 import Dress from '../components/Items/Tops/Dress';
 
+//Beard
+import Beard1 from 'components/Items/Beard/Beard1'
+
 export const ITEMS = {
     BODY: [],
-    BEARD: [],
+    BEARD: [<Beard1 />],
     TOPS: [
         <TShirt />,
         <Dress />,
@@ -61,7 +63,7 @@ export const ITEMS = {
         <Glasses1 />,
         "no glasses"
     ],
-        
+
     HAIR: [
         <LongHair />,
         <ShortHair />,
@@ -72,7 +74,6 @@ export const ITEMS = {
         "no hair (loïck)"
     ],
     MOUTH: [
-        <Mouth />,
         <Mouth2 />,
         <Mouth3 />,
         <Mouth4 />,

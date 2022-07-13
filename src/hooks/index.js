@@ -2,7 +2,7 @@ import React, { createContext, useCallback, useContext, useReducer } from 'react
 import Shoes1 from '../components/Items/Shoes/Shoes1'
 import RoundEyes from '../components/Items/Eyes/RoundEyes'
 import LongHair from '../components/Items/Hair/LongHair'
-import Mouth from '../components/Items/Mouth/Mouth'
+import { Mouth3 } from '../components/Items/Mouth/Mouth3'
 import TShirt from '../components/Items/Tops/TShirt'
 import Pantalon from '../components/Items/Bottom/Pantalon'
 import Brows1 from '../components/Items/EyeBrows/Brows1'
@@ -52,13 +52,12 @@ const AvatarCreatorProvider = ({ children }) => {
             FEET: '#000',
             NOSE: '#F2F6F8',
             GLASSES: '#F2F6F8',
-            BEARDS: '#F2F6F8',
         },
         BODY: <Dress />,
         BOTTOM: <Pantalon />,
-        BEARD: <Beard1/>,
-        MOUTH: <Mouth />,
-        GLASSES: <Glasses1/>,
+        BEARD: 'no beard',
+        MOUTH: <Mouth3 />,
+        GLASSES: 'no glasses',
         EYES: <RoundEyes />,
         EYEBROWS: <Brows1 />,
         HAIR: <LongHair />,
