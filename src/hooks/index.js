@@ -7,6 +7,9 @@ import TShirt from '../components/Items/Tops/TShirt'
 import Pantalon from '../components/Items/Bottom/Pantalon'
 import Brows1 from '../components/Items/EyeBrows/Brows1'
 import Mailjet from '../components/Brands/Mailjet'
+import Dress from '../components/Items/Tops/Dress'
+import { Glasses1 } from '../components/Items/Glasses/Glasses1'
+import Beard1 from '../components/Items/Beard/Beard1'
 
 
 
@@ -39,7 +42,9 @@ const AvatarCreatorProvider = ({ children }) => {
         category: 'BODY',
         colours: { // merge this with below?
             BODY: '#FDCDA7',
+            BEARD: '#FDCDA7',
             EYES: '#000',
+            GLASSES: '#000',
             EYEBROWS: '#000',
             HAIR: '#FEF7D3',
             TOPS: '#3B76CB',
@@ -49,13 +54,15 @@ const AvatarCreatorProvider = ({ children }) => {
             GLASSES: '#F2F6F8',
             BEARDS: '#F2F6F8',
         },
-        BODY: <TShirt />,
+        BODY: <Dress />,
         BOTTOM: <Pantalon />,
+        BEARD: <Beard1/>,
         MOUTH: <Mouth />,
+        GLASSES: <Glasses1/>,
         EYES: <RoundEyes />,
         EYEBROWS: <Brows1 />,
         HAIR: <LongHair />,
-        TOP: <TShirt />,
+        TOPS: <TShirt />,
         SHOES: <Shoes1 />,
         BACKGROUND: <Mailjet />,
 

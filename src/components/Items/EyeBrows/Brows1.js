@@ -3,7 +3,7 @@ import { StyledItem } from "../StyledItem";
 
 
 export const Brows1 = ({ color = "#FFE7A8" }) => (
-  <div className="svg-container" style={{ position: "absolute", top: "21%", left: "43%" }}>
+  <div className="svg-container" style={{ position: "absolute", top: "21%", left: "43%", zIndex: 11 }}>
     <StyledItem
       xmlns="http://www.w3.org/2000/svg"
       width="51"

@@ -3,6 +3,11 @@ import { BigEar01, BigEar02 } from '../assets/body'
 //Shoes
 import Shoes1 from '../components/Items/Shoes/Shoes1'
 
+
+//Glasses
+import Glasses1 from '../components/Items/Glasses/Glasses1'
+
+
 //Eyes
 import EyesWithEyelashes from '../components/Items/Eyes/EyesWithEyelashes'
 import RoundEyes from '../components/Items/Eyes/RoundEyes'
@@ -34,11 +39,15 @@ import { Mouth4 } from '../components/Items/Mouth/Mouth4';
 //Misc
 import Mailjet from '../components/Brands/Mailjet'
 import Mailgun from '../components/Brands/Mailgun'
+import TShirt from '../components/Items/Tops/TShirt';
+import Dress from '../components/Items/Tops/Dress';
 
 export const ITEMS = {
     BODY: [],
+    BEARD: [],
     TOPS: [
-        <RoundEyes />,
+        <TShirt />,
+        <Dress />,
     ],
     EYES: [
         <RoundEyes />,
@@ -48,13 +57,19 @@ export const ITEMS = {
         <Eyes5 />,
         <Eyes6 />
     ],
+    GLASSES: [
+        <Glasses1 />,
+        "no glasses"
+    ],
+        
     HAIR: [
         <LongHair />,
         <ShortHair />,
         <Hair3 />,
         <Hair4 />,
         <Hair5 />,
-        <Hair6 />
+        <Hair6 />,
+        "no hair (loïck)"
     ],
     MOUTH: [
         <Mouth />,
@@ -66,7 +81,6 @@ export const ITEMS = {
     EYEBROWS: [
         <Brows1 />,
         <Brows2 />,
-        <Brows3 />
     ],
     NOSE: [],
     SHOES: [

@@ -3,7 +3,7 @@ import { useAvatarCreatorDataContext } from '../../../hooks';
 
 export const Top = ({ style, ...rest }) => {
 
-    const { TOP} = useAvatarCreatorDataContext()
+    const { TOPS} = useAvatarCreatorDataContext()
 
-    return(React.cloneElement(TOP, {...rest}))
+    return(React.cloneElement(TOPS, {...rest}))
 }

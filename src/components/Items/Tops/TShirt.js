@@ -1,17 +1,18 @@
 import React from "react";
 import { StyledItem } from "../StyledItem";
 
-export const TShirt = ({ color }) => {
+export const TShirt = ({ color= "black" }) => {
   return (
-    <StyledItem
-      style={{
+    <div className="svg-container" style={{
         marginTop: '-10px',
         left: '11px',
-        top: '-19px',
+        top: '27px',
         position: 'absolute',
         width: '261px',
         height: '300px'
-      }}
+      }}>
+
+    <StyledItem
       viewBox="0 0 290 235"
       fill={color}
       xmlns="http://www.w3.org/2000/svg"
@@ -45,6 +46,7 @@ export const TShirt = ({ color }) => {
       </g>
 
     </StyledItem>
+    </div>
   )
 };
 

@@ -1,16 +1,16 @@
 import React from 'react';
 import { ITEMS } from '../../../config/items';
 import Mouth from './Mouth';
+import { useAvatarCreatorDataContext } from '../../../hooks';
+
 
 
 export const MouthContainer = ({ style, ...rest }) => {
 
-    switch (style) {
-        case ITEMS.MOUTH.MOUTH_1:
-            return (<Mouth {...rest} />)
-        default:
-            return (<Mouth {...rest} />)
-    }
+        const { MOUTH } = useAvatarCreatorDataContext()
+
+    return(React.cloneElement(MOUTH, {...rest}))
 
 }
+
 export default MouthContainer;
