@@ -4,7 +4,7 @@ import { Hair3 } from 'components/Items/Hair/Hair3'
 import Beard1 from 'components/Items/Beard/Beard1'
 import Glasses1 from 'components/Items/Glasses/Glasses1'
 import LongHair from 'components/Items/Hair/LongHair'
-
+import Bowtie1 from 'components/Items/Bowtie/Bowtie1'
 
 const DefaultAvatars = () => {
     const { setIsDisplayedItem } = useRequestsContext()
@@ -13,6 +13,7 @@ const DefaultAvatars = () => {
     const displayJeff = () => {
         setIsDisplayedItem({ HAIR: <Hair3 /> })
         setIsDisplayedItem({ BEARD: 'no beard' })
+        setIsDisplayedItem({ JEWELLERY: 'no jewellery' })
         setIsDisplayedItem({ GLASSES: <Glasses1 /> })
         setIsDisplayedItem({ colours: { ...colours, HAIR: '#000' } })
     }
@@ -21,6 +22,7 @@ const DefaultAvatars = () => {
         setIsDisplayedItem({ HAIR: <LongHair /> })
         setIsDisplayedItem({ BEARD: 'no beard' })
         setIsDisplayedItem({ GLASSES: 'no glasses' })
+        setIsDisplayedItem({ JEWELLERY: 'no jewellery' })
         setIsDisplayedItem({ colours: { ...colours, HAIR: '#E0AC69' } })
     }
 
@@ -28,6 +30,7 @@ const DefaultAvatars = () => {
         setIsDisplayedItem({ HAIR: <Hair3 /> })
         setIsDisplayedItem({ BEARD: <Beard1 /> })
         setIsDisplayedItem({ GLASSES: 'no glasses' })
+        setIsDisplayedItem({ JEWELLERY: 'no jewellery' })
         setIsDisplayedItem({ colours: { ...colours, HAIR: '#724837' } })
         setIsDisplayedItem({ colours: { ...colours, BEARD: '#724837' } })
     }
@@ -36,6 +39,7 @@ const DefaultAvatars = () => {
         setIsDisplayedItem({ HAIR: <Hair3 /> })
         setIsDisplayedItem({ BEARD: 'no beard' })
         setIsDisplayedItem({ GLASSES: 'no glasses' })
+        setIsDisplayedItem({ JEWELLERY: 'no jewellery' })
         setIsDisplayedItem({ colours: { ...colours, HAIR: '#000' } })
     }
 
@@ -43,6 +47,7 @@ const DefaultAvatars = () => {
         setIsDisplayedItem({ HAIR: 'no hair (loïck)' })
         setIsDisplayedItem({ BEARD: <Beard1 /> })
         setIsDisplayedItem({ GLASSES: <Glasses1 /> })
+        setIsDisplayedItem({ jewellery: <Bowtie1 /> })
         setIsDisplayedItem({ colours: { ...colours, BEARD: '#000' } })
     }
 

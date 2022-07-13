@@ -4,7 +4,7 @@ import { colours } from "../../../config/colours";
 
 export const StyledContainer = styled.div`
     background: ${colours.pw01};
-    min-height: 910px;
+    min-height: 990px;
     padding-bottom: 40px;
 `
 
