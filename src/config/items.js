@@ -44,6 +44,7 @@ import Bowtie1 from '../components/Items/Bowtie/Bowtie1'
 
 //Beard
 import Beard1 from 'components/Items/Beard/Beard1'
+import MGGnommeTshirt from '../components/Items/Tops/MGGnomeTshirt'
 
 export const ITEMS = {
     BODY: [],
@@ -52,6 +53,7 @@ export const ITEMS = {
     TOPS: [
         <TShirt />,
         <Dress />,
+        <MGGnommeTshirt/>
     ],
     EYES: [
         <RoundEyes />,

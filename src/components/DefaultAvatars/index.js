@@ -4,6 +4,7 @@ import { Hair3 } from 'components/Items/Hair/Hair3'
 import Beard1 from 'components/Items/Beard/Beard1'
 import Glasses1 from 'components/Items/Glasses/Glasses1'
 import LongHair from 'components/Items/Hair/LongHair'
+import MGGnommeTshirt from '../Items/Tops/MGGnomeTshirt'
 
 
 const DefaultAvatars = () => {
@@ -19,9 +20,10 @@ const DefaultAvatars = () => {
 
     const displayCeleste = () => {
         setIsDisplayedItem({ HAIR: <LongHair /> })
+        setIsDisplayedItem({ TOPS: <MGGnommeTshirt/> })
         setIsDisplayedItem({ BEARD: 'no beard' })
         setIsDisplayedItem({ GLASSES: 'no glasses' })
-        setIsDisplayedItem({ colours: { ...colours, HAIR: '#E0AC69' } })
+        setIsDisplayedItem({ colours: { ...colours, HAIR: '#E0AC69', TOPS: "#D13D42" } })
     }
 
     const displayHugo = () => {
