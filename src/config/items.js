@@ -41,10 +41,12 @@ import Mailjet from '../components/Brands/Mailjet'
 import Mailgun from '../components/Brands/Mailgun'
 import TShirt from '../components/Items/Tops/TShirt';
 import Dress from '../components/Items/Tops/Dress';
+import Bowtie1 from '../components/Items/Bowtie/Bowtie1'
 
 export const ITEMS = {
     BODY: [],
     BEARD: [],
+    JEWELLERY: [<Bowtie1/>, "no jewellery"],
     TOPS: [
         <TShirt />,
         <Dress />,

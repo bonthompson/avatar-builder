@@ -1,6 +1,6 @@
 import { CategoryButtonsContainer, CategoryButton } from './styles/index'
 import { useRequestsContext } from '../../hooks/index'
-import { GlassesCategoryIcon, FeetCategoryIcon, BeardsCategoryIcon, MiscCategoryIcon, BackgroundCategoryIcon, BodyCategoryIcon, BottomsCategoryIcon, EyebrowsCategoryIcon, EyesCategoryIcon, HairCategoryIcon, MouthCategoryIcon, TopsCategoryIcon } from '../../assets/categoryButtonSvgs/index'
+import { GlassesCategoryIcon, FeetCategoryIcon, BeardsCategoryIcon, MiscCategoryIcon, BackgroundCategoryIcon, BodyCategoryIcon, BottomsCategoryIcon, EyebrowsCategoryIcon, EyesCategoryIcon, HairCategoryIcon, MouthCategoryIcon, TopsCategoryIcon, JewelleryIcon } from '../../assets/categoryButtonSvgs/index'
 
 // Are we going to have a nose category?
 // need shoes
@@ -32,7 +32,7 @@ const CategoryButtons = () => {
                 <GlassesCategoryIcon />
             </CategoryButton>
             <CategoryButton onClick={() => setIsDisplayedItem({ category: 'JEWELLERY' })} >
-                <GlassesCategoryIcon />
+                <JewelleryIcon />
             </CategoryButton>
             <CategoryButton onClick={() => setIsDisplayedItem({ category: 'BEARDS' })} >
                 <BeardsCategoryIcon />
