@@ -9,6 +9,8 @@ import { StyledItem } from "./StyledItem";
 import { Top } from "./Tops";
 import TShirt from "./Tops/TShirt";
 import { useAvatarCreatorDataContext, useRequestsContext } from '../../hooks/index'
+import Glasses from "./Glasses";
+import Beard from "./Beard";
 
 
 export const Body = ({ color = "#E3CDAB" }) => {
@@ -25,10 +27,13 @@ export const Body = ({ color = "#E3CDAB" }) => {
     >
       <EyeBrows color={colours.EYEBROWS} />
       <Eyes color={colours.EYES} />
+      <Glasses color={colours.GLASSES} />
       <Hair color={colours.HAIR} />
+      <Beard/>
       <Mouth />
       <Top color={colours.TOPS} />
       <Bottom color={colours.BOTTOMS} />
+      <Shoes/>
       <StyledItem
         width="169"
         height="199"

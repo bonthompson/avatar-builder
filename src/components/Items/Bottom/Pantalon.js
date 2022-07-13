@@ -2,22 +2,24 @@ import React from "react";
 import { StyledItem } from "../StyledItem";
 
 export const Pantalon = ({ color = "#CB4A49" }) => (
+  <div className="svg-container"    style={{
+    marginTop: '-10px',
+    left: '9px',
+    top: '26px',
+    position: 'absolute',
+    width: '261px',
+    zIndex: '1',
+    height: '300px'
+  }}>
+
   <StyledItem
-    style={{
-      marginTop: '-10px',
-      left: '11px',
-      top: '-19px',
-      position: 'absolute',
-      width: '261px',
-      height: '300px'
-    }}
+
     viewBox="0 0 290 235"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
     color={color}
   >
     <g
-      fill="#fca"
+      fill={color}
       fillOpacity="1"
       stroke="none"
       strokeDasharray="none"
@@ -154,7 +156,6 @@ export const Pantalon = ({ color = "#CB4A49" }) => (
       display="inline"
     >
       <path
-        fill="#f9f9f9"
         stroke="none"
         strokeWidth="1.151"
         d="M84.167 201.518c.302 3.771 4.959 20.092 5.128 23.832.168 3.694.604 3.39.755 8.217.033 1.066 15.234.337 15.234.337s0-.861-.15-4.934c-.152-4.072-.915-12.022-.915-12.022s.32-1.515 1.27-.869c1.055.72 3.05 2.752 4.977 9.654.641 2.297.4 7.688.4 7.688h12.82l-1.96-31.45z"
@@ -469,6 +470,7 @@ export const Pantalon = ({ color = "#CB4A49" }) => (
     </g>
 
   </StyledItem>
+  </div>
 );
 
 export default Pantalon;

@@ -3,7 +3,7 @@ import { StyledItem } from '../StyledItem';
 
 export const Hair3 = ({ color }) => {
   return (
-      <div className="svg-container" style={{ position: "absolute", top: "15%", left: "35%" }}>
+      <div className="svg-container" style={{position: "absolute", top: "12%", left: "29%", zIndex: "2"}}>
         <StyledItem width="98"
             height="154"
             fill={color}

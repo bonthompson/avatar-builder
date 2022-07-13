@@ -3,7 +3,7 @@ import { StyledItem } from '../StyledItem';
 
 export const Mouth3 = ({ color }) => {
   return (
-      <div className="svg-container" style={{position: "absolute", top: "15%", left: "35%"}}>
+      <div className="svg-container" style={{position: "absolute", top: "15%", left: "32%"}}>
         <StyledItem width="98"
                     height="154"
                     viewBox="0 0 98 154" xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +11,7 @@ export const Mouth3 = ({ color }) => {
             <path d="m98.346 146.01s-9.2397 6.9897-14.215 18.427c-4.9752 11.438 4.9752 6.7779 4.9752 6.7779z"
                   display="inline" fill="#fca"/>
             <path d="m85.435 182.94-19.825-24.173 6.4882-5.7878 21.267 16.342s2.5232 9.8733-0.36046 11.576c-2.8837 1.7023-7.5696 2.0427-7.5696 2.0427z"
-                  display="inline" fill="#fca"/>
+                  display="inline"/>
             <g fill="#fca">
               <path d="m70.346 158.92s-3.4464 1.76-7.2622 0.162c-3.8157-1.598-7.7897-8.182-7.7897-8.182l16.459-11.107s5.1169 3.9735 3.5871 13.706c-1.5298 9.7323-4.9938 5.4214-4.9938 5.4214z"
                     display="inline"/>

@@ -16,7 +16,7 @@ export const Shoes1 = ({color}) => (
         xmlns="http://www.w3.org/2000/svg"
       width="43"
       height="14"
-      fill="none"
+      fill={color}
       viewBox="0 0 43 14" color={color}>
       <g
         fillOpacity="1"
@@ -31,7 +31,7 @@ export const Shoes1 = ({color}) => (
         d="M1.578 10.115s-.566 1.831.302 2.171c.868.34 8.767.584 11.457.51 3.404-.093 8.706.207 9.573-.643.869-.85-.251-2.34-.306-3.457-.053-1.096-3.364 1.55-7.01 1.55-3.645 0-14.016-.131-14.016-.131z"
       ></path>
       <path
-        fill="teal"
+        fill={color}
         stroke="#004D4D"
         strokeLinecap="round"
         strokeWidth="0.3"
@@ -45,7 +45,7 @@ export const Shoes1 = ({color}) => (
         d="M20.099 10.115s-.566 1.831.302 2.171c.868.34 8.767.584 11.457.51 3.404-.093 8.705.207 9.573-.643.869-.85-.251-2.34-.306-3.457-.053-1.096-3.364 1.55-7.01 1.55-3.645 0-14.016-.131-14.016-.131v0z"
       ></path>
       <path
-        fill="teal"
+        fill={color}
         stroke="#004D4D"
         strokeLinecap="round"
         strokeWidth="0.31"
