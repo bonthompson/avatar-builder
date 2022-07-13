@@ -7,9 +7,14 @@ import { useAvatarCreatorDataContext } from '../../../hooks';
 
 export const MouthContainer = ({ style, ...rest }) => {
 
-        const { MOUTH } = useAvatarCreatorDataContext()
+    const { MOUTH } = useAvatarCreatorDataContext()
 
-    return(React.cloneElement(MOUTH, {...rest}))
+        
+    let element ="";
+    
+    MOUTH !== "no mouth" ? element = React.cloneElement(MOUTH, {...rest}) : element = "";
+
+    return element;
 
 }
 

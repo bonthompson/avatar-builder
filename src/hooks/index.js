@@ -10,6 +10,8 @@ import Mailjet from '../components/Brands/Mailjet'
 import Dress from '../components/Items/Tops/Dress'
 import { Glasses1 } from '../components/Items/Glasses/Glasses1'
 import Beard1 from '../components/Items/Beard/Beard1'
+import Bowtie1 from '../components/Items/Bowtie/Bowtie1'
+
 
 
 
@@ -43,6 +45,7 @@ const AvatarCreatorProvider = ({ children }) => {
         colours: { // merge this with below?
             BODY: '#FDCDA7',
             BEARD: '#FDCDA7',
+            JEWELLERY: '#FDCDA7',
             EYES: '#000',
             GLASSES: '#000',
             EYEBROWS: '#000',
@@ -56,6 +59,7 @@ const AvatarCreatorProvider = ({ children }) => {
         BODY: <Dress />,
         BOTTOM: <Pantalon />,
         BEARD: 'no beard',
+        JEWELLERY: <Bowtie1 />,
         MOUTH: <Mouth3 />,
         GLASSES: 'no glasses',
         EYES: <RoundEyes />,
