@@ -1,15 +1,19 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import html2canvas from "html2canvas";
 
 import AvatarContainer from '../AvatarContainer/index'
-import { StyledContainer, DownloadButton } from './styles/index'
+import DefaultAvatars from '../DefaultAvatars/index'
+import { StyledContainer, DownloadButton, Loader } from './styles/index'
 import ItemCarousel from '../ItemCarousel/index'
 import CategoryButtons from '../CategoryButtons/index'
 
 const Container = () => {
+  const [loading, setLoading] = useState(false);
+
   const componentRef = useRef(null);
 
   const handleDownloadImage = async () => {
+    setLoading(true)
     const element = componentRef.current;
     const canvas = await html2canvas(element);
 
@@ -23,22 +27,25 @@ const Container = () => {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      setLoading(false)
     } else {
       window.open(data);
+      setLoading(false)
     }
   };
 
   return (
     <StyledContainer className="layout-container">
-      {/* <button onClick={handleDownloadImage}>
-        Export As JPEG
-      </button> */}
       <AvatarContainer ref={componentRef} />
       <CategoryButtons />
       <ItemCarousel />
-      <DownloadButton onClick={handleDownloadImage}>
-        Download & Share!
-      </DownloadButton>
+      <DefaultAvatars />
+      {loading ?
+        <Loader /> :
+        <DownloadButton onClick={handleDownloadImage}>
+          Download & Share!
+        </DownloadButton>
+      }
     </StyledContainer>
 
   );

@@ -1,6 +1,6 @@
 import { CategoryButtonsContainer, CategoryButton } from './styles/index'
 import { useRequestsContext } from '../../hooks/index'
-import { MiscCategoryIcon, BackgroundCategoryIcon, BodyCategoryIcon, BottomsCategoryIcon, EyebrowsCategoryIcon, EyesCategoryIcon, HairCategoryIcon, MouthCategoryIcon, TopsCategoryIcon } from '../../assets/categoryButtonSvgs/index'
+import { GlassesCategoryIcon, FeetCategoryIcon, BeardsCategoryIcon, MiscCategoryIcon, BackgroundCategoryIcon, BodyCategoryIcon, BottomsCategoryIcon, EyebrowsCategoryIcon, EyesCategoryIcon, HairCategoryIcon, MouthCategoryIcon, TopsCategoryIcon } from '../../assets/categoryButtonSvgs/index'
 
 // Are we going to have a nose category?
 // need shoes
@@ -25,9 +25,15 @@ const CategoryButtons = () => {
             <CategoryButton onClick={() => setIsDisplayedItem({ category: 'MOUTH' })} >
                 <MouthCategoryIcon />
             </CategoryButton>
-            {/* <CategoryButton onClick={() => setIsDisplayedItem({category: 'NOSE'})} >
+            {/* <CategoryButton onClick={() => setIsDisplayedItem({ category: 'NOSE' })} >
                 nose
             </CategoryButton> */}
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'GLASSES' })} >
+                <GlassesCategoryIcon />
+            </CategoryButton>
+            <CategoryButton onClick={() => setIsDisplayedItem({ category: 'BEARDS' })} >
+                <BeardsCategoryIcon />
+            </CategoryButton>
             <CategoryButton onClick={() => setIsDisplayedItem({ category: 'TOPS' })} >
                 <TopsCategoryIcon />
             </CategoryButton>
@@ -35,8 +41,7 @@ const CategoryButtons = () => {
                 <BottomsCategoryIcon />
             </CategoryButton>
             <CategoryButton onClick={() => setIsDisplayedItem({ category: 'SHOES' })} >
-                {/* <FeetCategoryIcon /> */}
-                shoes
+                <FeetCategoryIcon />
             </CategoryButton>
             <CategoryButton onClick={() => setIsDisplayedItem({ category: 'MISC' })} >
                 <MiscCategoryIcon />
