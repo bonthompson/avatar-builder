@@ -40,6 +40,7 @@ import Mailjet from '../components/Brands/Mailjet'
 import Mailgun from '../components/Brands/Mailgun'
 import TShirt from '../components/Items/Tops/TShirt';
 import Dress from '../components/Items/Tops/Dress';
+import Bowtie1 from '../components/Items/Bowtie/Bowtie1'
 
 //Beard
 import Beard1 from 'components/Items/Beard/Beard1'
@@ -47,6 +48,7 @@ import Beard1 from 'components/Items/Beard/Beard1'
 export const ITEMS = {
     BODY: [],
     BEARD: [<Beard1 />],
+    JEWELLERY: [<Bowtie1/>, "no jewellery"],
     TOPS: [
         <TShirt />,
         <Dress />,
