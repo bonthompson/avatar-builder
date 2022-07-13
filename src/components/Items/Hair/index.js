@@ -6,7 +6,10 @@ export const Hair = ({ style, ...rest }) => {
 
     const { HAIR } = useAvatarCreatorDataContext()
 
-    return(React.cloneElement(HAIR, {...rest}))
+    let hair ="";
+    
+    HAIR !== "no hair (loïck)" ? hair = React.cloneElement(HAIR, {...rest}) : hair = "";
 
+    return hair;
 }
 export default Hair;

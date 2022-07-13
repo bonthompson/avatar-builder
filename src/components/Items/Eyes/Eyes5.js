@@ -3,7 +3,7 @@ import { StyledItem } from '../StyledItem';
 
 export const Eyes5 = ({ color }) => {
   return (
-      <div className="svg-container" style={{position: "absolute", top: "15%", left: "35%"}}>
+      <div className="svg-container" style={{position: "absolute", top: "15%", left: "32%"}}>
         <StyledItem width="98"
                     height="154"
                     viewBox="0 0 98 154" xmlns="http://www.w3.org/2000/svg">

@@ -15,8 +15,7 @@ const CategoryButton = styled.div`
     svg {
         margin-top: 10px;
     }
-    // &:hover {
-    //   }
+
 `
 
 export { CategoryButtonsContainer, CategoryButton }
