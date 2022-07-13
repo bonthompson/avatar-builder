@@ -11,6 +11,7 @@ import TShirt from "./Tops/TShirt";
 import { useAvatarCreatorDataContext, useRequestsContext } from '../../hooks/index'
 import Glasses from "./Glasses";
 import Beard from "./Beard";
+import Bowtie from "./Bowtie";
 
 
 export const Body = ({ color = "#E3CDAB" }) => {
@@ -32,6 +33,7 @@ export const Body = ({ color = "#E3CDAB" }) => {
       <Beard/>
       <Mouth />
       <Top color={colours.TOPS} />
+      <Bowtie/>
       <Bottom color={colours.BOTTOMS} />
       <Shoes/>
       <StyledItem

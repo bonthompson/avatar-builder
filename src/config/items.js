@@ -72,6 +72,7 @@ export const ITEMS = {
         "no hair (loïck)"
     ],
     MOUTH: [
+        "no mouth",
         <Mouth />,
         <Mouth2 />,
         <Mouth3 />,
