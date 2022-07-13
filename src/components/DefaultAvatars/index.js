@@ -5,6 +5,8 @@ import Beard1 from 'components/Items/Beard/Beard1'
 import Glasses1 from 'components/Items/Glasses/Glasses1'
 import LongHair from 'components/Items/Hair/LongHair'
 import MGGnommeTshirt from '../Items/Tops/MGGnomeTshirt'
+import TShirt from '../Items/Tops/TShirt'
+import Bowtie1 from '../Items/Bowtie/Bowtie1'
 
 
 const DefaultAvatars = () => {
@@ -14,8 +16,9 @@ const DefaultAvatars = () => {
     const displayJeff = () => {
         setIsDisplayedItem({ HAIR: <Hair3 /> })
         setIsDisplayedItem({ BEARD: 'no beard' })
+        setIsDisplayedItem({ TOPS: <MGGnommeTshirt/> })
         setIsDisplayedItem({ GLASSES: <Glasses1 /> })
-        setIsDisplayedItem({ colours: { ...colours, HAIR: '#000' } })
+        setIsDisplayedItem({ colours: { ...colours, HAIR: '#000', TOPS: "#6F67D9"} })
     }
 
     const displayCeleste = () => {
@@ -29,21 +32,27 @@ const DefaultAvatars = () => {
     const displayHugo = () => {
         setIsDisplayedItem({ HAIR: <Hair3 /> })
         setIsDisplayedItem({ BEARD: <Beard1 /> })
+        setIsDisplayedItem({ TOPS: <TShirt/> })
         setIsDisplayedItem({ GLASSES: 'no glasses' })
-        setIsDisplayedItem({ colours: { ...colours, HAIR: '#724837' } })
+        setIsDisplayedItem({ colours: { ...colours, HAIR: '#724837', TOPS: "#6F67D9" } })
     }
 
     const displaySeb = () => {
         setIsDisplayedItem({ HAIR: <Hair3 /> })
         setIsDisplayedItem({ BEARD: 'no beard' })
+        setIsDisplayedItem({ TOPS: <TShirt/> })
         setIsDisplayedItem({ GLASSES: 'no glasses' })
-        setIsDisplayedItem({ colours: { ...colours, HAIR: '#000' } })
+        setIsDisplayedItem({ colours: { ...colours, HAIR: '#000', TOPS: "#6F67D9" } })
     }
 
     const displayLoick = () => {
         setIsDisplayedItem({ HAIR: 'no hair (loïck)' })
+        setIsDisplayedItem({ TOPS: <TShirt/> })
+        setIsDisplayedItem({ JEWELLERY: <Bowtie1/> })
         setIsDisplayedItem({ BEARD: <Beard1 /> })
         setIsDisplayedItem({ GLASSES: <Glasses1 /> })
+        setIsDisplayedItem({ colours: { ...colours, TOPS: "#6F67D9" } })
+
     }
 
     return (
