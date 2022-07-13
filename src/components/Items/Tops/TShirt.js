@@ -3,7 +3,7 @@ import { StyledItem } from "../StyledItem";
 
 export const TShirt = ({ color= "black" }) => {
   return (
-    <div className="svg-container" style={{
+    <div className="svg-container t-shirt" style={{
         marginTop: '-10px',
         left: '11px',
         top: '27px',
