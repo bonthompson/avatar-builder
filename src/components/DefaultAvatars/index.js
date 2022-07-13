@@ -4,7 +4,14 @@ import { Hair3 } from 'components/Items/Hair/Hair3'
 import Beard1 from 'components/Items/Beard/Beard1'
 import Glasses1 from 'components/Items/Glasses/Glasses1'
 import LongHair from 'components/Items/Hair/LongHair'
+<<<<<<< HEAD
 import Bowtie1 from 'components/Items/Bowtie/Bowtie1'
+=======
+import MGGnommeTshirt from '../Items/Tops/MGGnomeTshirt'
+import TShirt from '../Items/Tops/TShirt'
+import Bowtie1 from '../Items/Bowtie/Bowtie1'
+
+>>>>>>> 986df47e7f878e0004aa2fd9a3c35cae0db9b4ef
 
 const DefaultAvatars = () => {
     const { setIsDisplayedItem } = useRequestsContext()
@@ -14,41 +21,46 @@ const DefaultAvatars = () => {
         setIsDisplayedItem({ HAIR: <Hair3 /> })
         setIsDisplayedItem({ BEARD: 'no beard' })
         setIsDisplayedItem({ JEWELLERY: 'no jewellery' })
+        setIsDisplayedItem({ TOPS: <MGGnommeTshirt /> })
         setIsDisplayedItem({ GLASSES: <Glasses1 /> })
-        setIsDisplayedItem({ colours: { ...colours, HAIR: '#000' } })
+        setIsDisplayedItem({ colours: { ...colours, HAIR: '#000', TOPS: "#6F67D9" } })
     }
 
     const displayCeleste = () => {
         setIsDisplayedItem({ HAIR: <LongHair /> })
+        setIsDisplayedItem({ TOPS: <MGGnommeTshirt /> })
         setIsDisplayedItem({ BEARD: 'no beard' })
         setIsDisplayedItem({ GLASSES: 'no glasses' })
         setIsDisplayedItem({ JEWELLERY: 'no jewellery' })
-        setIsDisplayedItem({ colours: { ...colours, HAIR: '#E0AC69' } })
+        setIsDisplayedItem({ colours: { ...colours, HAIR: '#E0AC69', TOPS: "#D13D42" } })
     }
 
     const displayHugo = () => {
         setIsDisplayedItem({ HAIR: <Hair3 /> })
         setIsDisplayedItem({ BEARD: <Beard1 /> })
+        setIsDisplayedItem({ TOPS: <TShirt /> })
         setIsDisplayedItem({ GLASSES: 'no glasses' })
         setIsDisplayedItem({ JEWELLERY: 'no jewellery' })
-        setIsDisplayedItem({ colours: { ...colours, HAIR: '#724837' } })
-        setIsDisplayedItem({ colours: { ...colours, BEARD: '#724837' } })
+        setIsDisplayedItem({ colours: { ...colours, HAIR: '#724837', TOPS: "#6F67D9", BEARD: '#724837' } })
     }
 
     const displaySeb = () => {
         setIsDisplayedItem({ HAIR: <Hair3 /> })
         setIsDisplayedItem({ BEARD: 'no beard' })
+        setIsDisplayedItem({ TOPS: <TShirt /> })
         setIsDisplayedItem({ GLASSES: 'no glasses' })
         setIsDisplayedItem({ JEWELLERY: 'no jewellery' })
-        setIsDisplayedItem({ colours: { ...colours, HAIR: '#000' } })
+        setIsDisplayedItem({ colours: { ...colours, HAIR: '#000', TOPS: "#6F67D9" } })
     }
 
     const displayLoick = () => {
         setIsDisplayedItem({ HAIR: 'no hair (loïck)' })
+        setIsDisplayedItem({ TOPS: <TShirt /> })
+        setIsDisplayedItem({ JEWELLERY: <Bowtie1 /> })
         setIsDisplayedItem({ BEARD: <Beard1 /> })
         setIsDisplayedItem({ GLASSES: <Glasses1 /> })
-        setIsDisplayedItem({ jewellery: <Bowtie1 /> })
-        setIsDisplayedItem({ colours: { ...colours, BEARD: '#000' } })
+        setIsDisplayedItem({ colours: { ...colours, TOPS: "#6F67D9", BEARD: '#000' } })
+
     }
 
     return (
