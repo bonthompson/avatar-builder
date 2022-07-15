@@ -39,7 +39,7 @@ const Container = () => {
       <AvatarContainer ref={componentRef} />
       <CategoryButtons />
       <ItemCarousel />
-      <DefaultAvatars />
+      {/*<DefaultAvatars />*/}
       {loading ?
         <Loader /> :
         <DownloadButton onClick={handleDownloadImage}>
