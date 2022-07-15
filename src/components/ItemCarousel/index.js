@@ -52,10 +52,10 @@ const ItemCarousel = () => {
             </StyledDiv>
 
             <Slider {...settings}>
-                {ITEMS[category].map(item => (
+                {ITEMS[category].map(Item => (
                     <StyledSlide
-                        onClick={() => setIsDisplayedItem({ [category]: item })}>
-                        {item}
+                        onClick={() => setIsDisplayedItem({ [category]: Item })}>
+                        {typeof Item !== 'string' ? <Item /> : ''}
                     </StyledSlide>
                 ))}
             </Slider>

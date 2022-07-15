@@ -12,29 +12,11 @@ const StyledSlide = styled.div`
     background: lightgray;
     height: 90px;
     width: 90px !important;
-
-    .svg-container {
-        position: relative !important;
-        top: unset !important;
-        left: unset !important;
-         svg {
-            position: relative !important;
-
-            width: 70px !important;
-            height: 70px !important;
-            left: auto !important;
-            top: 10px !important;
-         }
-    }
-
-    svg {
-        // fill: white;
-        // width: 70px !important;
-        // height: 70px !important;
-        // left: auto !important;
-        // top: 10px !important;
-        position: relative !important;
-    }
+  
+  svg {
+    height: 90px;
+    width: 90px;
+  }
 `
 
 const StyledDiv = styled.div`

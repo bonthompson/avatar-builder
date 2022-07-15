@@ -51,11 +51,6 @@ export function BodyContainer() {
         <PartContainer>
           <EyeBrowPart color={colours.EYEBROWS} />
         </PartContainer>
-        {GLASSES !== 'no glasses' && (
-          <PartContainer>
-            <GlassesPart color={colours.GLASSES} />
-          </PartContainer>
-        )}
         <PartContainer>
           <MouthPart />
         </PartContainer>
@@ -67,9 +62,9 @@ export function BodyContainer() {
         <PartContainer>
           <ShirtPart color={colours.TOPS} />
         </PartContainer>
-        {JEWELLERY !== 'no jewellery' && (
+        {HAIR !== 'no hair' && (
             <PartContainer>
-              <JewellryPart />
+              <HairPart color={colours.HAIR} />
             </PartContainer>
         )}
         {MISC !== 'no misc' && (
@@ -77,9 +72,14 @@ export function BodyContainer() {
               <MiscPart />
             </PartContainer>
         )}
-        {HAIR !== 'no hair' && (
+        {JEWELLERY !== 'no jewellery' && (
             <PartContainer>
-              <HairPart color={colours.HAIR} />
+              <JewellryPart />
+            </PartContainer>
+        )}
+        {GLASSES !== 'no glasses' && (
+            <PartContainer>
+              <GlassesPart color={colours.GLASSES} />
             </PartContainer>
         )}
         <PartContainer>
