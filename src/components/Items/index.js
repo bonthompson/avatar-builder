@@ -1,1 +1,0 @@
-import LongHair from "./Hair/LongHair";

@@ -4,7 +4,7 @@ import { useAvatarCreatorDataContext } from '../../hooks';
 
 const Brands = ({style, ...rest}) =>  {
 
-    const { BACKGROUND} = useAvatarCreatorDataContext()
+    const { BACKGROUND } = useAvatarCreatorDataContext()
 
     return(React.cloneElement(BACKGROUND, {...rest}))
 }

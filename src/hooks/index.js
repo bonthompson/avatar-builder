@@ -1,16 +1,6 @@
 import React, { createContext, useCallback, useContext, useReducer } from 'react'
-import Shoes1 from '../components/Items/Shoes/Shoes1'
-import RoundEyes from '../components/Items/Eyes/RoundEyes'
-import LongHair from '../components/Items/Hair/LongHair'
-import { Mouth3 } from '../components/Items/Mouth/Mouth3'
-import TShirt from '../components/Items/Tops/TShirt'
-import Pantalon from '../components/Items/Bottom/Pantalon'
-import Brows1 from '../components/Items/EyeBrows/Brows1'
-import Mailjet from '../components/Brands/Mailjet'
-import Dress from '../components/Items/Tops/Dress'
-import { Glasses1 } from '../components/Items/Glasses/Glasses1'
-import Beard1 from '../components/Items/Beard/Beard1'
-import Bowtie1 from '../components/Items/Bowtie/Bowtie1'
+
+import { ITEMS } from '../config/items';
 
 const ACTIONS = {
     DISPLAYED_ITEMS: 'setDisplayedItems',
@@ -34,7 +24,7 @@ const useRequestsContext = () => useAvatarCreatorContext(RequestsContext)
 
 
 const AvatarCreatorProvider = ({ children }) => {
-
+    console.log(ITEMS)
     const initialState = {
         isDisplayedItem: ["test"],
         category: 'BODY',
@@ -51,18 +41,18 @@ const AvatarCreatorProvider = ({ children }) => {
             FEET: '#000',
             NOSE: '#F2F6F8',
         },
-        BODY: <Dress />,
-        BOTTOM: <Pantalon />,
-        BEARD: 'no beard',
-        JEWELLERY: 'no jewellery',
-        MOUTH: <Mouth3 />,
-        GLASSES: 'no glasses',
-        EYES: <RoundEyes />,
-        EYEBROWS: <Brows1 />,
-        HAIR: <LongHair />,
-        TOPS: <TShirt />,
-        SHOES: <Shoes1 />,
-        BACKGROUND: <Mailjet />,
+        BOTTOM: ITEMS.BOTTOMS[0],
+        BEARD: ITEMS.BEARD[0],
+        JEWELLERY: ITEMS.JEWELLERY[0],
+        MOUTH: ITEMS.MOUTH[0],
+        GLASSES: ITEMS.GLASSES[0],
+        EYES:  ITEMS.EYES[0],
+        EYEBROWS: ITEMS.EYEBROWS[0],
+        HAIR: ITEMS.HAIR[0],
+        TOPS: ITEMS.TOPS[0],
+        SHOES: ITEMS.SHOES[0],
+        MISC: ITEMS.MISC[0],
+        BACKGROUND: ITEMS.BACKGROUND[0],
 
     }
 
